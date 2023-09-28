@@ -34,7 +34,7 @@ const Function = ({ functionName, ARN, functionLayersARN, layers }) => {
     axios
       //post request to functionRouter.js
       .post(
-        'http://localhost:3000/api/functions/layers',
+        'https://lambda-peeler.onrender.com/api/functions/layers',
         //pass Function ARN and Layers Array to backend
         { ARN: ARN, layers: layers },
         {
