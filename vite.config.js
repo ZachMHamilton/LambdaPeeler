@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import historyApiFallback from 'connect-history-api-fallback';
+import pluginRewriteAll from 'vite-plugin-rewrite-all';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,5 +18,6 @@ export default defineConfig({
       },
     },
     port: 8080,
+    middleware: [historyApiFallback()],
   },
 });
