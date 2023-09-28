@@ -1,8 +1,0 @@
-services:
-  - type: web
-  name: lambdapeeler
-  runtime: node
-  routes:
-  - type: rewrite
-    source: ^/
-    destination: /
