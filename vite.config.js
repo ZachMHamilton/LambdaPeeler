@@ -1,14 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import historyApiFallback from 'connect-history-api-fallback';
-import pluginRewriteAll from 'vite-plugin-rewrite-all';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   test: {
     globals: true,
   },
-  plugins: [react(), pluginRewriteAll()],
+  plugins: [react()],
   server: {
     proxy: {
       '/api': {
@@ -18,6 +16,5 @@ export default defineConfig({
       },
     },
     port: 8080,
-    middleware: [historyApiFallback()],
   },
 });
