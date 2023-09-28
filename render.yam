@@ -1,4 +1,7 @@
-routes:
+services:
+  -type: web
+  runtime: node
+  routes:
   - type: rewrite
     source: ^/
     destination: /
