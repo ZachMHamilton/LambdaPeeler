@@ -1,5 +1,6 @@
 services:
-  -type: web
+  - type: web
+  name: lambdapeeler
   runtime: node
   routes:
   - type: rewrite
